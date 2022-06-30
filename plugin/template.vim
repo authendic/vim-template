@@ -24,6 +24,7 @@ let g:template_author = get(g:, 'template_author', 'daniel')
 
 " auto use templates
 " 新建文件时自动使用模板
+" 这个augroup 需要在 syntax on 之前加载，否则没有效果
 augroup Templates
     autocmd!
     " 模板替换算法: [template.vim](https://www.vim.org/scripts/script.php?script_id=2834)

@@ -11,8 +11,7 @@ let g:template_paths = get(g:, 'template_paths', ['./templates'])
 function template#GetTemplate(postfix)
     let s:name = "skeleton.".a:postfix
     for s:p in g:template_paths
-        if s:p[0:2] == './'
-            s:p = expand(s:p)
+        if s:p[0:1] == './'
             let s:template_file = s:template_home .s:p[1:]. '/'. s:name
         else
             let s:template_file = s:p. '/' . s:name
