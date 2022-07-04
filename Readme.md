@@ -1,4 +1,5 @@
 # vim-template
+[![license-img](https://img.shields.io/github/license/authendic/vim-template)]()
 
 ## 安装
 
