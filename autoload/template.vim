@@ -26,10 +26,9 @@ endfunction
 function template#FileToIndentity(filename, ...)
     let suff = ''
     if a:0 > 0
+        let with_time = a:1
         let suff = '_'.strftime('%M%S')
     endif
-    let nameid = substitute(expand('%:t:r'), '[.-]', '-')
+    let nameid = substitute(a:filename, '[.-]', '_', 'g')
     return nameid . suff
-
 endfunction
-if exists('g:loaded_<%=expand('%:t:r').'_'.strftime('%M%S')%>') | finish | endif " prevent loading file twice

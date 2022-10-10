@@ -7,11 +7,12 @@
 
 scriptencoding utf-8
 
-if exists('g:loaded_<%=expand('%:t:r').'_'.strftime('%M%S')%>') | finish | endif " prevent loading file twice
+function template#FileToIndentity(filename, ...)
+if exists('g:loaded_<%=template#FileToIndentity(expand('%:t:r'), 1)%>') | finish | endif " prevent loading file twice
 let s:save_cpo = &cpo
 set cpo&vim
 
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
-let g:loaded_<%=expand('%:t:r').'_'.strftime('%M%S')%>= 1
+let g:loaded_<%=template#FileToIndentity(expand('%:t:r'), 1)%>= 1
