@@ -7,7 +7,7 @@
 
 scriptencoding utf-8
 
-if exists('g:<%=expand('%:t:r').'_'.strftime('%M%S')%>') | finish | endif " prevent loading file twice
+if exists('g:loaded_<%=expand('%:t:r').'_'.strftime('%M%S')%>') | finish | endif " prevent loading file twice
 let s:save_cpo = &cpo
 set cpo&vim
 
