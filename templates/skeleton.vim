@@ -14,4 +14,4 @@ set cpo&vim
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
-let g:<%=expand('%:t:r').'_'.strftime('%M%S')%>= 1
+let g:loaded_<%=expand('%:t:r').'_'.strftime('%M%S')%>= 1
