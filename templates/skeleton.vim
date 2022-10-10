@@ -7,7 +7,6 @@
 
 scriptencoding utf-8
 
-function template#FileToIndentity(filename, ...)
 if exists('g:loaded_<%=template#FileToIndentity(expand('%:t:r'), 1)%>') | finish | endif " prevent loading file twice
 let s:save_cpo = &cpo
 set cpo&vim
